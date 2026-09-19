@@ -1,0 +1,70 @@
+{
+  "best_model": "XGBoost",
+  "selection_rule": "Lowest validation MAE; RMSE used as tie-breaker.",
+  "metrics": [
+    {
+      "Model": "XGBoost",
+      "MAE": 2.9126,
+      "RMSE": 3.9683,
+      "R2": 0.9387
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE": 3.0198,
+      "RMSE": 4.1049,
+      "R2": 0.9345
+    },
+    {
+      "Model": "Linear Regression",
+      "MAE": 3.1738,
+      "RMSE": 4.2226,
+      "R2": 0.9306
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 3.6547,
+      "RMSE": 5.0177,
+      "R2": 0.9021
+    }
+  ],
+  "cleaning_report": {
+    "rows_before": 6030,
+    "duplicate_rows": 30,
+    "missing_values": {
+      "distance_km": 104,
+      "driver_experience_years": 111,
+      "restaurant_rating": 124,
+      "order_items": 0,
+      "preparation_time_min": 129,
+      "weather": 111,
+      "traffic_level": 108,
+      "time_of_day": 0,
+      "vehicle_type": 112,
+      "delivery_area": 0,
+      "day_of_week": 0,
+      "delivery_time_min": 25
+    },
+    "invalid_value_counts": {
+      "non_positive_distance": 0,
+      "negative_experience": 0,
+      "rating_outside_1_to_5": 0,
+      "non_positive_items": 0,
+      "non_positive_preparation_time": 0,
+      "non_positive_target": 0
+    },
+    "iqr_outlier_flags_preserved": {
+      "distance_km": 135,
+      "driver_experience_years": 163,
+      "restaurant_rating": 28,
+      "order_items": 102,
+      "preparation_time_min": 120,
+      "delivery_time_min": 146
+    },
+    "duplicate_rows_removed": 30,
+    "rows_removed_for_missing_or_invalid_target_or_values": 25,
+    "rows_after_cleaning": 5975
+  },
+  "trained_at_utc": "2026-09-09T04:00:36.377347+00:00",
+  "train_rows": 4780,
+  "test_rows": 1195
+}
